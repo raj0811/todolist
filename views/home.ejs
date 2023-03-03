@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f324db610c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+ 
+
+    <main>
+
+ 
+
+    <div class="input">
+        <form  action="/add" method="post">
+            <input class="tsk" type="text" name="task" placeholder="Task" >
+            <input type="submit" value="Add" class="add-btn">
+        </form>
+    </div>
+
+    <div class="bar">
+        <h1>Your Tasks</h1>
+        <div class="tdata">
+            <h3>Total List <p><%= total_task  %></p> </h3> 
+            
+            <a href="/delall"><i class="fa-solid fa-trash"></i> Remove all</a>
+        </div>
+    </div>
+    <div class="task-list">
+
+        <ul>
+
+        <%for(let i of task_data){%>
+
+        <div class="task-card" id="task-done">
+            <div class="task-here">
+            
+                <h2> <%= i.task %> </h2>
+                <div class="oth">
+                    
+                    
+                    <a href="/del/?taskdel=<%= i.task %>"><i class="fa-solid fa-trash"></i> del</a>
+                </div>
+                
+            </div>
+
+
+
+            
+           
+
+        </div>
+        <%}%>
+
+    </ul>
+    </div>
+
+    <script src="/js/check.js"></script>
+</main>
+</body>
+</html>

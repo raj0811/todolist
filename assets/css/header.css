@@ -1,0 +1,32 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+header{
+    background-color: aqua;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    color: aliceblue;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img{
+    height: 90%;
+    width: 4.5%;
+    /* background-color: aqua; */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2387/2387635.png');
+    background-size: 100%;
+   position: relative;
+   left: 40%;
+   border-radius: 50px;
+}
+
+@media only screen and (max-width: 745px){
+    .img{
+        display: none;
+    }
+}
